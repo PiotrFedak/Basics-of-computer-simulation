@@ -1,2 +1,0 @@
-# Basics of computer simulation
- 
