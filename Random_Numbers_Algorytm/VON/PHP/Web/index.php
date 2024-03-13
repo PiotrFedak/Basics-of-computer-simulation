@@ -3,8 +3,8 @@
 function generatePoints() {
     $points = [];
     $stop =0;
-    $Xo=1247;
-    $m=4;
+    $Xo=12;
+    $m=2;
     do{
         $y=pow($Xo,2);
         $length = strlen((string)abs($y));

@@ -3,7 +3,7 @@
 function generatePoints() {
         $points = [];
         $stop =0;
-        $Xo=3622;
+        $Xo=1616;
         $m=4;
         do{
             $y=pow($Xo,2);
@@ -15,7 +15,7 @@ function generatePoints() {
             if($length == $desireLenght){
                 $numberString=strval($y);
             }
-            $middleIndex = floor($length / 2);
+            $middleIndex = floor($desireLenght / 2);
             $halfDesiredLength = $m / 2; 
             $startIndex = $middleIndex - $halfDesiredLength;
             $endIndex = $middleIndex + $halfDesiredLength - 1;
@@ -27,7 +27,7 @@ function generatePoints() {
                    }
                 }
                 if($stop!==1){
-                $points[]= [$int,$numberString];
+                $points[]= [$int];
                 $Xo=$int;
                 }
            
@@ -38,11 +38,19 @@ function generatePoints() {
 
 
     $points = generatePoints();
+    $suma=0;
+    $all=0;
+
 
 foreach ($points as $point) {
-    echo $point[0].(" ");
-    echo $point[1]. "\n";
+   $suma+=$point[0];
+   $all++;
 }
+$average=$suma/$all;
+echo $average.("  śrenia  dla ").$all."\n";
+
+
+
 
 
 ?>
