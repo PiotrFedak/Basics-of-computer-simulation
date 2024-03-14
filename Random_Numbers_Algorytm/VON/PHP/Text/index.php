@@ -3,7 +3,7 @@
 function generatePoints() {
         $points = [];
         $stop =0;
-        $Xo=16;
+        $Xo=12;
         $m=2;
         do{
             $y=pow($Xo,2);
