@@ -3,9 +3,9 @@
 function generatePoints() {
         $points = [];
         $stop=0;
-        $Xo=3;
+        $Xo=6;
         $a=2;
-        $m=100;
+        $m=1000;
         $modulo=0;
         $x=0;
         do{
@@ -44,26 +44,19 @@ function generatePoints() {
 
 
     $points = generatePoints();
-    $suma=0;
-    $all=0;
-    $table = [];
+    $table;
+    $i=0;
+do{
+    $a=$points[$i][0];
+    $b=$points[$i+1][0];
+    echo $a." ".$b."\n";
+    $operation=pow(1-$a,3)*((256/27)*$a);
+    if($b<=$operation){
+        $table=$a;
+    }
+    $i++;
+}while($table!=true);
 
-foreach ($points as $point) {
-    echo $point[0].(" ") ."\n";
-}
-foreach ($points as $point) {
-   $suma+= $point[0];
-   $all+=1;
-}
-$average=$suma/$all;
+    echo $table."\n";
 
-echo $average.("  śrenia  dla ").$all."\n";
 
-for ($i=0; $i<$all-1; $i++ ) {
-    $table[]=[$points[$i],$points[$i+1]];
-}
-
-foreach ($table as $tab) {
-    echo $tab[0][0].(" ") ."\n";
-    echo $tab[1][0].(" ") ."\n";
-}
