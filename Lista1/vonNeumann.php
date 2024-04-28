@@ -1,5 +1,19 @@
 <?php
 
+ function monteCarloIntegration($points) {
+    $sum = 0;
+    foreach ($points as $point) {
+        $sum += $point[0];
+    }
+    $average = $sum / count($points);
+    return $average;
+}
+
+$points = generatePoints();
+$integral = monteCarloIntegration($points);
+echo "Całka obliczona za pomocą metody Monte Carlo: " . $integral . "\n";
+
+
 function generatePoints() {
         $points = [];
         $stop =0;
